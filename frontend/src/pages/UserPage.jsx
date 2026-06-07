@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { usersAPI, reviewsAPI, matchesAPI, chatAPI } from '../services/api';
+import { usersAPI, reviewsAPI } from '../services/api';
 import SkillTag from '../components/profile/SkillTag';
 import ReviewForm from '../components/profile/ReviewForm';
 import ReviewCard from '../components/profile/ReviewCard';
@@ -22,7 +22,8 @@ const [showSwapModal, setShowSwapModal] = useState(false);
     reviewsAPI.getReviews(id).then(({ data }) => setReviews(data.reviews));
   };
 
-  useEffect(() => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
     usersAPI.getUser(id).then(({ data }) => setProfile(data.user));
     loadReviews();
   }, [id]);

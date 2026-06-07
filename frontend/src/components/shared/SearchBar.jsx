@@ -53,7 +53,7 @@ export default function SearchBar() {
         <input
           value={query}
           onChange={e => { setQuery(e.target.value); setShowResults(true); }}
-          onFocus={() => setShowResults(true)}
+          
           placeholder="Search users or skills..."
           style={{
             width: '100%', padding: '0.6rem 1rem 0.6rem 2.5rem',
