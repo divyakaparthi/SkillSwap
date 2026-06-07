@@ -23,6 +23,8 @@ const [showSwapModal, setShowSwapModal] = useState(false);
   };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
     usersAPI.getUser(id).then(({ data }) => setProfile(data.user));
     loadReviews();
