@@ -22,8 +22,6 @@ const [showSwapModal, setShowSwapModal] = useState(false);
     reviewsAPI.getReviews(id).then(({ data }) => setReviews(data.reviews));
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  // eslint-disable-next-line react-hooks/exhaustive-deps
 // eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
     usersAPI.getUser(id).then(({ data }) => setProfile(data.user));
