@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
@@ -22,7 +23,6 @@ const [showSwapModal, setShowSwapModal] = useState(false);
     reviewsAPI.getReviews(id).then(({ data }) => setReviews(data.reviews));
   };
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
     usersAPI.getUser(id).then(({ data }) => setProfile(data.user));
     loadReviews();
